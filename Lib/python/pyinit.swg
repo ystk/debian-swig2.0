@@ -4,6 +4,10 @@
 
 %insert(init) "swiginit.swg"
 
+#if defined(SWIGPYTHON_BUILTIN)
+%fragment("<stddef.h>"); // For offsetof
+#endif
+
 %init %{
 
 #ifdef __cplusplus
@@ -398,6 +402,7 @@ SWIG_init(void) {
   m = Py_InitModule((char *) SWIG_name, SwigMethods);
 #endif
   md = d = PyModule_GetDict(m);
+  (void)md;
 
   SWIG_InitializeModule(0);
 

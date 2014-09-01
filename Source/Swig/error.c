@@ -12,8 +12,6 @@
  * error messages.
  * ----------------------------------------------------------------------------- */
 
-char cvsroot_error_c[] = "$Id: error.c 12221 2010-09-15 20:17:11Z wsfulton $";
-
 #include "swig.h"
 #include <stdarg.h>
 #include <ctype.h>

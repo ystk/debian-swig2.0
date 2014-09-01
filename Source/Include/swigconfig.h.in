@@ -1,4 +1,4 @@
-/* Source/Include/swigconfig.h.in.  Generated from configure.in by autoheader.  */
+/* Source/Include/swigconfig.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Define to 1 if the system has the type `bool'. */
 #undef HAVE_BOOL
@@ -68,6 +68,9 @@
 
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
+
+/* The size of `void *', as computed by sizeof. */
+#undef SIZEOF_VOID_P
 
 /* Define to 1 if you have the ANSI C header files. */
 #undef STDC_HEADERS

@@ -11,8 +11,6 @@
  *     Implements a simple list object.
  * ----------------------------------------------------------------------------- */
 
-char cvsroot_list_c[] = "$Id: list.c 12221 2010-09-15 20:17:11Z wsfulton $";
-
 #include "dohint.h"
 
 typedef struct List {
@@ -242,7 +240,7 @@ static DOH *List_str(DOH *lo) {
   List *l = (List *) ObjData(lo);
   s = NewStringEmpty();
   if (ObjGetMark(lo)) {
-    Printf(s, "List(%x)", lo);
+    Printf(s, "List(%p)", lo);
     return s;
   }
   ObjSetMark(lo, 1);
