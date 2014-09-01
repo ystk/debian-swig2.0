@@ -11,8 +11,6 @@
  * Parsing utilities.
  * ----------------------------------------------------------------------------- */
 
-char cvsroot_util_c[] = "$Id: util.c 11876 2010-02-27 23:53:33Z wsfulton $";
-
 #include "swig.h"
 #include "cparse.h"
 

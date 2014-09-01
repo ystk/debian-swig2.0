@@ -12,8 +12,6 @@
  *     file semantics.
  * ----------------------------------------------------------------------------- */
 
-char cvsroot_string_c[] = "$Id: string.c 12849 2011-11-28 19:35:44Z wsfulton $";
-
 #include "dohint.h"
 
 extern DohObjInfo DohStringType;
@@ -1153,11 +1151,7 @@ DOHString *DohNewStringf(const DOHString_or_char *fmt, ...) {
 int DohStrcmp(const DOHString_or_char *s1, const DOHString_or_char *s2) {
   const char *c1 = Char(s1);
   const char *c2 = Char(s2);
-  if (c1 && c2) {
-    return strcmp(c1, c2);
-  } else {
-    return c1 < c2;
-  }
+  return strcmp(c1, c2);
 }
 
 int DohStrncmp(const DOHString_or_char *s1, const DOHString_or_char *s2, int n) {

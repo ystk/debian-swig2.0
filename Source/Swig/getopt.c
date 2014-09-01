@@ -20,8 +20,6 @@
  *       Should have cleaner error handling in general.
  * ----------------------------------------------------------------------------- */
 
-char cvsroot_getopt_c[] = "$Id: getopt.c 11876 2010-02-27 23:53:33Z wsfulton $";
-
 #include "swig.h"
 
 static char **args;

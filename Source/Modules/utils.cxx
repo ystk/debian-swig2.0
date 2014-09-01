@@ -11,8 +11,6 @@
  * Various utility functions.
  * ----------------------------------------------------------------------------- */
 
-char cvsroot_utils_cxx[] = "$Id: utils.cxx 12654 2011-05-05 06:09:55Z wsfulton $";
-
 #include <swigmod.h>
 
 int is_public(Node *n) {

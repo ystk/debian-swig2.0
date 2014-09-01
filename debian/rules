@@ -10,6 +10,9 @@
 # Support building from Subversion repository
 export DH_ALWAYS_EXCLUDE=.svn
 
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
 # XXX: patch to pike detection submitted upstream, need to adapt
 # configure args
 MAKEOPTS =
@@ -17,7 +20,7 @@ CONFIGURE_ARGS := \
 	--prefix=/usr --mandir=/usr/share/man	\
 	--with-tclconfig=/usr/lib			\
 	--with-python=/usr/bin/python			\
-	--with-ruby=/usr/bin/ruby1.8			\
+	--with-ruby=/usr/bin/ruby			\
 	--with-pike=/usr/bin/pike7.6			\
 	--with-pikeincl=/usr/include/pike/7.6.24	\
 	--with-swiglibdir=/usr/share/swig2.0		\
@@ -66,7 +69,6 @@ configure-stamp: $(QUILT_STAMPFN)
 	dh_autoreconf ./autogen.sh
 	mkdir -p builddir
 	PHP4INC="`php-config --includes`" \
-	CFLAGS="-g -O2 `perl -e 'use Config; print $$Config{ccflags};'`" \
 	cd builddir && ../configure $(CONFIGURE_ARGS)
 	touch configure-stamp
 
@@ -133,6 +135,7 @@ binary-arch: build install
 #	dh_installinit -a $(NO_PACKAGES_ARGS)
 	dh_installcron -a $(NO_PACKAGES_ARGS)
 	dh_installman -p swig2.0 debian/swig2.0.1
+	dh_install -a --sourcedir=$(CURDIR)
 #	dh_undocumented
 	dh_installchangelogs -a -Nswig2.0 $(NO_PACKAGES_ARGS) CHANGES
 	dh_installchangelogs -pswig2.0 $(NO_PACKAGES_ARGS)

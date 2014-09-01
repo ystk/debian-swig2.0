@@ -12,8 +12,6 @@
  *     ordinary FILE * or integer file descriptor.
  * ----------------------------------------------------------------------------- */
 
-char cvsroot_file_c[] = "$Id: file.c 12167 2010-07-22 16:59:29Z vadz $";
-
 #include "dohint.h"
 
 #ifdef DOH_INTFILE

@@ -13,8 +13,6 @@
  * to be created in a piecemeal manner.
  * ----------------------------------------------------------------------------- */
 
-char cvsroot_wrapfunc_c[] = "$Id: wrapfunc.c 11876 2010-02-27 23:53:33Z wsfulton $";
-
 #include "swig.h"
 #include <ctype.h>
 

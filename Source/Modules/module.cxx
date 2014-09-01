@@ -11,8 +11,6 @@
  * This file is responsible for the module system.  
  * ----------------------------------------------------------------------------- */
 
-char cvsroot_module_cxx[] = "$Id: module.cxx 11876 2010-02-27 23:53:33Z wsfulton $";
-
 #include "swigmod.h"
 
 struct Module {

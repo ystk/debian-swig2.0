@@ -1,3 +1,48 @@
+swig2.0 (2.0.12-1) unstable; urgency=medium
+
+  * New upstream release 2.0.12.
+  * Build with Guile 2.0 (closes: #746016).
+  * For some reason, GUILE_CFLAGS is set correctly again (closes: #701865).
+
+ -- Torsten Landschoff <torsten@debian.org>  Sun, 11 May 2014 01:24:34 +0200
+
+swig2.0 (2.0.11-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build with the default Ruby instead of hardcoding ruby1.9.1.
+     (Closes: #745927)
+
+ -- Christian Hofstaedtler <christian@hofstaedtler.name>  Sat, 26 Apr 2014 17:23:59 +0200
+
+swig2.0 (2.0.11-1) unstable; urgency=low
+
+  * Merge new upstream release 2.0.11 (closes: #727188).
+  * Use Ruby 1.9.1 instead of 1.8 which is about to be removed from sid.
+    Thanks to Cédric Boutillier for the patch (closes: #722282).
+  * Install swigp4.ml manually as the upstream Makefile fails to do so
+    when using a separate build directory (closes: #725945).
+
+ -- Torsten Landschoff <torsten@debian.org>  Fri, 25 Oct 2013 23:36:37 +0200
+
+swig2.0 (2.0.10-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Torsten Landschoff <torsten@debian.org>  Mon, 09 Sep 2013 22:06:54 +0200
+
+swig2.0 (2.0.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * Use dpkg-buildflags while building (lintian).
+
+ -- Torsten Landschoff <torsten@debian.org>  Thu, 28 Feb 2013 00:37:38 +0100
+
+swig2.0 (2.0.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Torsten Landschoff <torsten@debian.org>  Wed, 31 Oct 2012 12:05:24 +0100
+
 swig2.0 (2.0.7-3) unstable; urgency=low
 
   * Use /usr/bin/python instead of /usr/bin/python2.5 in debian/rules
